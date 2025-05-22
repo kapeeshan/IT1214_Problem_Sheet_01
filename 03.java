@@ -8,11 +8,17 @@ class BankAccount {
     this.accountHolder = accountHolder;
     this.balance = balance;
   }
-  public int getAccountNumber() { return accountNumber; }
+  public int getAccountNumber() {
+    return accountNumber;
+  }
 
-  public String getAccountHolder() { return accountHolder; }
+  public String getAccountHolder() {
+    return accountHolder;
+  }
 
-  public double getBalance() { return balance; }
+  public double getBalance() {
+    return balance;
+  }
 
   public void withdraw(double amount) {
     if (amount > balance) {
@@ -22,8 +28,7 @@ class BankAccount {
   }
 
   public String toString() {
-    return "Account Number: " + accountNumber + ", Holder: " + accountHolder +
-        ", Balance: " + balance;
+    return "Account Number: " + accountNumber + ", Holder: " + accountHolder + ", Balance: " + balance;
   }
 }
 
@@ -49,8 +54,7 @@ class Bank {
       if (accounts[i].getAccountNumber() == accountNumber) {
         try {
           accounts[i].withdraw(amount);
-          System.out.println("Withdrawn " + amount + " from account " +
-                             accountNumber);
+          System.out.println("Withdrawn " + amount + " from account " + accountNumber);
         } catch (IllegalArgumentException e) {
           System.out.println("Error: " + e.getMessage());
         }
@@ -97,11 +101,17 @@ class BankAccount {
     this.balance = balance;
   }
 
-  public int getAccountNumber() { return accountNumber; }
+  public int getAccountNumber() {
+    return accountNumber;
+  }
 
-  public String getAccountHolder() { return accountHolder; }
+  public String getAccountHolder() {
+    return accountHolder;
+  }
 
-  public double getBalance() { return balance; }
+  public double getBalance() {
+    return balance;
+  }
 
   public void withdraw(double amount) {
     if (amount > balance) {
@@ -111,8 +121,7 @@ class BankAccount {
   }
 
   public String toString() {
-    return "Account Number: " + accountNumber + ", Holder: " + accountHolder +
-        ", Balance: " + balance;
+    return "Account Number: " + accountNumber + ", Holder: " + accountHolder + ", Balance: " + balance;
   }
 }
 
@@ -138,8 +147,7 @@ class Bank {
       if (accounts[i].getAccountNumber() == accountNumber) {
         try {
           accounts[i].withdraw(amount);
-          System.out.println("Withdrawn " + amount + " from account " +
-                             accountNumber);
+          System.out.println("Withdrawn " + amount + " from account " + accountNumber);
         } catch (IllegalArgumentException e) {
           System.out.println("Error: " + e.getMessage());
         }
