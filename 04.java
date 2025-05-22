@@ -9,13 +9,16 @@ class Ticket {
     this.seatNumber = seatNumber;
   }
 
-  public int getTicketNumber() { return ticketNumber; }
+  public int getTicketNumber() {
+    return ticketNumber;
+  }
 
-  public int getSeatNumber() { return seatNumber; }
+  public int getSeatNumber() {
+    return seatNumber;
+  }
 
   public String toString() {
-    return "Ticket Number: " + ticketNumber + ", Customer: " + customerName +
-        ", Seat: " + seatNumber;
+    return "Ticket Number: " + ticketNumber + ", Customer: " + customerName + ", Seat: " + seatNumber;
   }
 }
 
@@ -23,8 +26,7 @@ class BookingSystem {
   private Ticket[] tickets = new Ticket[10];
   private int ticketCount = 0;
 
-  public void bookTicket(int ticketNumber, String customerName,
-                         int seatNumber) {
+  public void bookTicket(int ticketNumber, String customerName, int seatNumber) {
     if (seatNumber < 1 || seatNumber > 10) {
       System.out.println("Invalid seat number.");
       return;
@@ -43,15 +45,13 @@ class BookingSystem {
     }
 
     tickets[ticketCount++] = new Ticket(ticketNumber, customerName, seatNumber);
-    System.out.println("Ticket booked successfully for " + customerName +
-                       " at seat " + seatNumber);
+    System.out.println("Ticket booked successfully for " + customerName + " at seat " + seatNumber);
   }
 
   public void cancelTicket(int ticketNumber) {
     for (int i = 0; i < ticketCount; i++) {
       if (tickets[i].getTicketNumber() == ticketNumber) {
-        System.out.println("Cancelling ticket for seat " +
-                           tickets[i].getSeatNumber());
+        System.out.println("Cancelling ticket for seat " + tickets[i].getSeatNumber());
 
         // Shift remaining tickets to avoid gap
         for (int j = i; j < ticketCount - 1; j++) {
