@@ -28,9 +28,21 @@ class Vehicle {
 }
 
 class ParkingLot{
+    Vehicle vehicle;
 
     ParkingLot[] parkinglot=new ParkingLot[5];
     int vehiclesparked=parkinglot.length;
+
+
+    public ParkingLot(String licensePlate, String ownerName, int hoursParked) {
+        vehicle.setLicensePlate(licensePlate);
+        vehicle.setOwnerName(ownerName);
+        vehicle.setHoursParked(hoursParked);
+    }
+
+    public ParkingLot() {
+
+    }
 
     void park(String licensePlate,String ownerName,int hoursParked){
             int i=0;
@@ -38,17 +50,20 @@ class ParkingLot{
             i++;
     }
 
-    void remove(String licensePlate)
+    void remove(String licensePlate){
     int removeIndex;
      for (int i = 0; i < vehiclesparked; i++) {
                 if (parkinglot[i].equals(licensePlate)) {
                     removeIndex= i;
+                    for (int j = removeIndex; j < vehiclesparked- 1; j++) {
+                    parkinglot[i] = parkinglot[i + 1];
+                        }
                     break;
                 }
+                
             }
-    for (int i = removeIndex; i < vehiclesparked- 1; i++) {
-            parkinglot[i] = parkinglot[i + 1];
-        }
+    
+    }
 
     void display(){
         System.out.println("Parked Vehicle Details");
