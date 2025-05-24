@@ -35,7 +35,7 @@ public void setDaysAttended(int daysAttended) {
 
 @Override
 public String toString() {
-    return "Student ID: " + studentId + ", Name: " + name + ", Days Attended: " + daysAtten
+    return "Student ID: " + studentId + ", Name: " + name + ", Days Attended: " + daysAttended;
     }
 }
 

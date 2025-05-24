@@ -40,7 +40,7 @@ class Student {
   public static void main(String[] args) {
     try {
       Student s = new Student("John", 75, 15, 90);
-      System.out.printSystem.out.println("Student Average Score: ", s.getName(), s.calculateAverage());
+      System.out.println("Student Average Score: "+ s.getName()+ s.calculateAverage());
     } catch (IllegalArgumentException e) {
       System.out.println("Error: " + e.getMessage());
     }
