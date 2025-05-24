@@ -81,18 +81,14 @@ class Main {
   public static void main(String[] args) {
     BookingSystem system = new BookingSystem();
 
-    // Book 3 tickets
     system.bookTicket(1, "Alice", 1);
     system.bookTicket(2, "Bob", 2);
     system.bookTicket(3, "Charlie", 3);
 
-    // Cancel ticket #2
     system.cancelTicket(2);
 
-    // Rebook seat 2
     system.bookTicket(4, "David", 2);
 
-    // Display all current bookings
     system.displayBookings();
   }
 }
